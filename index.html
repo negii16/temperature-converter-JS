@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="heading">
+      <h1>Temperature Converter</h1>
+      <p>Convert between Celcius, Fahrenheit and Kelvin</p>
+    </header>
+    <div class="container">
+      <form id="converter" novalidate>
+        <div class="field">
+          <label for="temp">Enter Temperature</label>
+          <input
+            id="temp"
+            type="number"
+            placeholder="e.g., 36.6"
+            step="any"
+            required
+          />
+          <small class="error" id="err"></small>
+        </div>
+
+        <div class="grid">
+          <div class="field">
+            <label for="from">From</label>
+            <select id="from">
+              <option value="C">Celsius (°C)</option>
+              <option value="F">Fahrenheit (°F)</option>
+              <option value="K">Kelvin (K)</option>
+            </select>
+          </div>
+          <button type="button" class="swap" id="swap" aria-label="Swap units">
+            ⇄
+          </button>
+          <div class="field">
+            <label for="to">To</label>
+            <select id="to">
+              <option value="F">Fahrenheit (°F)</option>
+              <option value="C">Celsius (°C)</option>
+              <option value="K">Kelvin (K)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="First" id="convertBtn" type="submit">Convert</button>
+          <button class="clear" id="resetBtn" type="reset">Reset</button>
+        </div>
+
+        <output
+          id="result"
+          class="result"
+          for="temp from to"
+          aria-live="polite"
+        ></output>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <p>
+        Made with ❤️ by Palak Negi &nbsp;|&nbsp; © 2025 Temperature Converter
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
